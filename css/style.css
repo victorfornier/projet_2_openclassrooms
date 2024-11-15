@@ -14,6 +14,7 @@
 }
 
 body {
+    padding-top: 90px;
     display: flex;
     justify-content: center;
 }
@@ -121,7 +122,54 @@ a {
     margin-bottom: 5px;
 }
 
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    z-index: 1000;}
 
+#logo-booki {
+    margin-left: 20px; 
+    height: 25px;
+}
+
+.nav-links-header {
+    list-style-type: none;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-link-header {
+    text-decoration: none;
+    color: #000000;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link-header::before {
+    content: ""; /* Nécessaire pour générer le pseudo-élément */
+    position: absolute;
+    top: -26px; /* Place la barre au-dessus de la "box" */
+    left: 0;
+    width: 100%; /* Barre de la largeur du lien */
+    height: 4px; /* Épaisseur de la barre */
+    background-color: transparent; /* La barre est invisible par défaut */
+}
+
+.nav-link-header:hover::before {
+    background-color: #007BFF;
+}
+
+.nav-link-header:hover {
+    color: #007bff;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
